@@ -727,6 +727,31 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Image Preview Modal */}
+      {previewImage && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+          <div className="relative max-w-4xl max-h-screen w-full h-full flex items-center justify-center">
+            <button
+              onClick={() => setPreviewImage(null)}
+              className="absolute top-4 right-4 z-50 bg-white/10 hover:bg-white/20 text-white rounded-full p-2 transition-all duration-300"
+              aria-label="Close preview"
+            >
+              <X size={28} />
+            </button>
+            <img
+              src={previewImage.src}
+              alt={previewImage.alt}
+              className="w-full h-full object-contain rounded-2xl shadow-2xl"
+            />
+            <button
+              onClick={() => setPreviewImage(null)}
+              className="absolute inset-0 z-0"
+              aria-label="Close preview by clicking outside"
+            />
+          </div>
+        </div>
+      )}
     </main>
   )
 }
