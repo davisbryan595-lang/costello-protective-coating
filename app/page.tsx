@@ -169,10 +169,11 @@ export default function Home() {
       <header className="sticky top-1 z-40 bg-white/95 backdrop-blur-sm border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-900 to-blue-700 rounded-lg flex items-center justify-center">
-              <span className="text-white font-black text-sm">CC</span>
-            </div>
-            <span className="font-black text-lg text-blue-900">COSTELLO</span>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2Fe59e9fce6e5a4081b7f0d28a2c01f6be?format=webp&width=800"
+              alt="Costello Protective Coatings Logo"
+              className="h-10 w-auto object-contain"
+            />
           </div>
           <nav className="hidden md:flex gap-8 text-sm font-semibold">
             <a href="#services" className="text-slate-700 hover:text-blue-700 transition-colors">
