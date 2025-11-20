@@ -99,62 +99,38 @@ export default function Home() {
     },
   ]
 
-  const galleryCategories = [
+  const galleryItems: GalleryItem[] = [
     {
-      title: "Residential Transformations",
-      items: [
-        {
-          before: "Weathered & faded exterior",
-          after: "Pristine, protected finish",
-          beforeUrl: "https://images.unsplash.com/photo-1570129477492-45201003074e?w=800&h=600&fit=crop",
-          afterUrl: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop",
-          title: "House Exterior Transformation",
-        },
-        {
-          before: "Stained roof surface",
-          after: "Clean, sealed protection",
-          beforeUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
-          afterUrl: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&h=600&fit=crop",
-          title: "Roof Cleaning & Coating",
-        },
-        {
-          before: "Oxidized metal surfaces",
-          after: "Mirror-like restoration",
-          beforeUrl: "https://images.unsplash.com/photo-1589939705066-5470fed1a298?w=800&h=600&fit=crop",
-          afterUrl: "https://images.unsplash.com/photo-1585399981826-6a5b48d5ccc8?w=800&h=600&fit=crop",
-          title: "Metal Surface Restoration",
-        },
-      ] as GalleryImage[],
+      title: "Pressure Washing & Restoration",
+      description: "Professional high-pressure cleaning and restoration services to bring weathered surfaces back to life. Our team uses state-of-the-art equipment to safely clean driveways, sidewalks, decks, and building exteriors.",
+      imageUrl: "https://images.unsplash.com/photo-1581092162562-40038f56c232?w=900&h=700&fit=crop",
     },
     {
-      title: "Commercial Excellence",
-      items: [
-        {
-          before: "Industrial wear",
-          after: "Professional restoration",
-          beforeUrl: "https://images.unsplash.com/photo-1486386094519-3192dd97c5e0?w=800&h=600&fit=crop",
-          afterUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop",
-          title: "Commercial Building Restoration",
-        },
-        {
-          before: "Algae-covered surfaces",
-          after: "Brilliant renewal",
-          beforeUrl: "https://images.unsplash.com/photo-1581092162562-40038f56c232?w=800&h=600&fit=crop",
-          afterUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop",
-          title: "Pressure Washing & Renewal",
-        },
-        {
-          before: "Faded storefront",
-          after: "Like-new appearance",
-          beforeUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-          afterUrl: "https://images.unsplash.com/photo-1478860409698-8707f313ee8b?w=800&h=600&fit=crop",
-          title: "Storefront Painting",
-        },
-      ] as GalleryImage[],
+      title: "Roof Preservation & Coatings",
+      description: "Advanced coating systems that extend roof life and enhance protection through Louisiana's challenging climate. Our specialized roof treatments prevent algae growth, UV damage, and extend the life of your roof by years.",
+      imageUrl: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=900&h=700&fit=crop",
+    },
+    {
+      title: "Premium Exterior Painting",
+      description: "High-quality exterior finishes and accent colors designed to withstand Louisiana's weather conditions. Our painters deliver flawless results with premium paint systems that protect and beautify your property.",
+      imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&h=700&fit=crop",
+    },
+    {
+      title: "Driveway & Concrete Sealing",
+      description: "Protect your investment with professional concrete sealing and restoration. Our sealers prevent cracking, discoloration, and extend the life of your concrete surfaces while enhancing their appearance.",
+      imageUrl: "https://images.unsplash.com/photo-1570129477492-45201003074e?w=900&h=700&fit=crop",
+    },
+    {
+      title: "Metal Surface Protection",
+      description: "Specialized coatings for metal surfaces including railings, gates, and structural elements. Our metal protection systems prevent rust and corrosion while maintaining a polished, professional appearance.",
+      imageUrl: "https://images.unsplash.com/photo-1585399981826-6a5b48d5ccc8?w=900&h=700&fit=crop",
+    },
+    {
+      title: "Commercial Building Services",
+      description: "Comprehensive exterior maintenance and protection for commercial properties. From storefront preparation to full-scale industrial coating applications, we deliver professional excellence.",
+      imageUrl: "https://images.unsplash.com/photo-1486386094519-3192dd97c5e0?w=900&h=700&fit=crop",
     },
   ]
-
-  const currentGallery = galleryCategories[currentGallerySet]
 
   return (
     <main className="bg-white text-slate-900">
