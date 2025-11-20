@@ -4,12 +4,10 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import { ChevronDown, Phone, Mail, MapPin, Droplet, Palette, Shield, Zap, Award, Users, X } from "lucide-react"
 
-interface GalleryImage {
-  before: string
-  after: string
-  beforeUrl: string
-  afterUrl: string
+interface GalleryItem {
   title: string
+  description: string
+  imageUrl: string
 }
 
 interface ModalImage {
