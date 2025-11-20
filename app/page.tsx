@@ -402,20 +402,26 @@ export default function Home() {
             {currentGallery.items.map((item, idx) => (
               <div key={idx} className="space-y-4">
                 {/* Before */}
-                <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-64 bg-gradient-to-br from-slate-300 to-slate-400 relative flex items-center justify-center">
+                <button
+                  onClick={() => setPreviewImage({ src: item.beforeUrl, alt: `Before: ${item.before}` })}
+                  className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-64 bg-gradient-to-br from-slate-300 to-slate-400 relative flex items-center justify-center w-full cursor-pointer hover:opacity-90"
+                >
                   <img
-                    src={`/before-and-after-transformation.png?height=300&width=400&query=before-${item.before.toLowerCase().replace(/ /g, "-")}`}
+                    src={item.beforeUrl}
                     alt={`Before: ${item.before}`}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg font-bold">Click to Preview</span>
+                  </div>
                   <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
                     <span className="inline-block bg-slate-900/90 text-white px-4 py-2 rounded-lg font-bold text-sm">
                       Before
                     </span>
                     <p className="text-white text-sm mt-2">{item.before}</p>
                   </div>
-                </div>
+                </button>
 
                 {/* Arrow */}
                 <div className="flex justify-center">
@@ -425,20 +431,26 @@ export default function Home() {
                 </div>
 
                 {/* After */}
-                <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-64 bg-gradient-to-br from-blue-100 to-blue-50 relative flex items-center justify-center">
+                <button
+                  onClick={() => setPreviewImage({ src: item.afterUrl, alt: `After: ${item.after}` })}
+                  className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-64 bg-gradient-to-br from-blue-100 to-blue-50 relative flex items-center justify-center w-full cursor-pointer hover:opacity-90"
+                >
                   <img
-                    src={`/after-.jpg?height=300&width=400&query=after-${item.after.toLowerCase().replace(/ /g, "-")}`}
+                    src={item.afterUrl}
                     alt={`After: ${item.after}`}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg font-bold">Click to Preview</span>
+                  </div>
                   <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
                     <span className="inline-block bg-blue-900/90 text-white px-4 py-2 rounded-lg font-bold text-sm">
                       After
                     </span>
                     <p className="text-white text-sm mt-2">{item.after}</p>
                   </div>
-                </div>
+                </button>
               </div>
             ))}
           </div>
