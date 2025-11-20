@@ -349,82 +349,34 @@ export default function Home() {
       <section id="gallery" className="py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-blue-900 mb-4">Before & After Gallery</h2>
+            <h2 className="text-5xl font-black text-blue-900 mb-4">Our Products & Services</h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto shadow-lg shadow-blue-500/40 rounded-full" />
             <p className="text-slate-600 text-lg mt-4 max-w-2xl mx-auto">
-              See the dramatic transformations we've achieved on residential and commercial properties across Acadiana
+              Explore our comprehensive range of protective coating services and solutions designed for Louisiana properties
             </p>
           </div>
 
-          <div className="flex gap-4 justify-center mb-12 flex-wrap">
-            {galleryCategories.map((category, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrentGallerySet(idx)}
-                className={`px-6 py-3 rounded-xl font-bold transition-all duration-300 ${
-                  idx === currentGallerySet
-                    ? "bg-blue-700 text-white shadow-lg shadow-blue-700/50"
-                    : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                }`}
-              >
-                {category.title}
-              </button>
-            ))}
-          </div>
-
           <div className="grid md:grid-cols-3 gap-8">
-            {currentGallery.items.map((item, idx) => (
-              <div key={idx} className="space-y-4">
-                {/* Before */}
+            {galleryItems.map((item, idx) => (
+              <div key={idx} className="group">
                 <button
-                  onClick={() => setPreviewImage({ src: item.beforeUrl, alt: `Before: ${item.before}` })}
-                  className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-64 bg-gradient-to-br from-slate-300 to-slate-400 relative flex items-center justify-center w-full cursor-pointer hover:opacity-90"
+                  onClick={() => setPreviewImage({ src: item.imageUrl, alt: item.title })}
+                  className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-80 w-full cursor-pointer mb-4"
                 >
                   <img
-                    src={item.beforeUrl}
-                    alt={`Before: ${item.before}`}
+                    src={item.imageUrl}
+                    alt={item.title}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg font-bold">Click to Preview</span>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
-                    <span className="inline-block bg-slate-900/90 text-white px-4 py-2 rounded-lg font-bold text-sm">
-                      Before
-                    </span>
-                    <p className="text-white text-sm mt-2">{item.before}</p>
+                    <span className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-bold">Click to Preview</span>
                   </div>
                 </button>
-
-                {/* Arrow */}
-                <div className="flex justify-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-blue-500 flex items-center justify-center shadow-lg">
-                    <ChevronDown className="text-white" size={24} />
-                  </div>
+                <div className="px-2">
+                  <h3 className="text-xl font-black text-blue-900 mb-3">{item.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{item.description}</p>
                 </div>
-
-                {/* After */}
-                <button
-                  onClick={() => setPreviewImage({ src: item.afterUrl, alt: `After: ${item.after}` })}
-                  className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-64 bg-gradient-to-br from-blue-100 to-blue-50 relative flex items-center justify-center w-full cursor-pointer hover:opacity-90"
-                >
-                  <img
-                    src={item.afterUrl}
-                    alt={`After: ${item.after}`}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg font-bold">Click to Preview</span>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
-                    <span className="inline-block bg-blue-900/90 text-white px-4 py-2 rounded-lg font-bold text-sm">
-                      After
-                    </span>
-                    <p className="text-white text-sm mt-2">{item.after}</p>
-                  </div>
-                </button>
               </div>
             ))}
           </div>
