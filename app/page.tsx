@@ -102,32 +102,32 @@ export default function Home() {
     {
       title: "Pressure Washing & Restoration",
       description: "Professional high-pressure cleaning and restoration services to bring weathered surfaces back to life. Our team uses state-of-the-art equipment to safely clean driveways, sidewalks, decks, and building exteriors.",
-      imageUrl: "https://images.unsplash.com/photo-1581092162562-40038f56c232?w=900&h=700&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/14023343/pexels-photo-14023343.jpeg",
     },
     {
       title: "Roof Preservation & Coatings",
       description: "Advanced coating systems that extend roof life and enhance protection through Louisiana's challenging climate. Our specialized roof treatments prevent algae growth, UV damage, and extend the life of your roof by years.",
-      imageUrl: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=900&h=700&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/34023076/pexels-photo-34023076.jpeg",
     },
     {
       title: "Premium Exterior Painting",
       description: "High-quality exterior finishes and accent colors designed to withstand Louisiana's weather conditions. Our painters deliver flawless results with premium paint systems that protect and beautify your property.",
-      imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&h=700&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg",
     },
     {
       title: "Driveway & Concrete Sealing",
       description: "Protect your investment with professional concrete sealing and restoration. Our sealers prevent cracking, discoloration, and extend the life of your concrete surfaces while enhancing their appearance.",
-      imageUrl: "https://images.unsplash.com/photo-1570129477492-45201003074e?w=900&h=700&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/17792954/pexels-photo-17792954.jpeg",
     },
     {
       title: "Metal Surface Protection",
       description: "Specialized coatings for metal surfaces including railings, gates, and structural elements. Our metal protection systems prevent rust and corrosion while maintaining a polished, professional appearance.",
-      imageUrl: "https://images.unsplash.com/photo-1585399981826-6a5b48d5ccc8?w=900&h=700&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/13672876/pexels-photo-13672876.jpeg",
     },
     {
       title: "Commercial Building Services",
       description: "Comprehensive exterior maintenance and protection for commercial properties. From storefront preparation to full-scale industrial coating applications, we deliver professional excellence.",
-      imageUrl: "https://images.unsplash.com/photo-1486386094519-3192dd97c5e0?w=900&h=700&fit=crop",
+      imageUrl: "https://images.pexels.com/photos/11213206/pexels-photo-11213206.jpeg",
     },
   ]
 
