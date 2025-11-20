@@ -2,7 +2,20 @@
 
 import type React from "react"
 import { useState, useEffect } from "react"
-import { ChevronDown, Phone, Mail, MapPin, Droplet, Palette, Shield, Zap, Award, Users } from "lucide-react"
+import { ChevronDown, Phone, Mail, MapPin, Droplet, Palette, Shield, Zap, Award, Users, X } from "lucide-react"
+
+interface GalleryImage {
+  before: string
+  after: string
+  beforeUrl: string
+  afterUrl: string
+  title: string
+}
+
+interface ModalImage {
+  src: string
+  alt: string
+}
 
 export default function Home() {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -10,6 +23,7 @@ export default function Home() {
   const [currentGallerySet, setCurrentGallerySet] = useState(0)
   const [formData, setFormData] = useState({ name: "", phone: "", email: "", service: "", message: "" })
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [previewImage, setPreviewImage] = useState<ModalImage | null>(null)
 
   useEffect(() => {
     const testimonials = [
