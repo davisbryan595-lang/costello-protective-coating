@@ -18,7 +18,6 @@ interface ModalImage {
 export default function Home() {
   const [scrollProgress, setScrollProgress] = useState(0)
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
-  const [currentGallerySet, setCurrentGallerySet] = useState(0)
   const [formData, setFormData] = useState({ name: "", phone: "", email: "", service: "", message: "" })
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [previewImage, setPreviewImage] = useState<ModalImage | null>(null)
