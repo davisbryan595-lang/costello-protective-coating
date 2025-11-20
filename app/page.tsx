@@ -105,18 +105,54 @@ export default function Home() {
     {
       title: "Residential Transformations",
       items: [
-        { before: "Weathered & faded exterior", after: "Pristine, protected finish" },
-        { before: "Stained roof surface", after: "Clean, sealed protection" },
-        { before: "Oxidized metal surfaces", after: "Mirror-like restoration" },
-      ],
+        {
+          before: "Weathered & faded exterior",
+          after: "Pristine, protected finish",
+          beforeUrl: "https://images.unsplash.com/photo-1570129477492-45201003074e?w=800&h=600&fit=crop",
+          afterUrl: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop",
+          title: "House Exterior Transformation",
+        },
+        {
+          before: "Stained roof surface",
+          after: "Clean, sealed protection",
+          beforeUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+          afterUrl: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&h=600&fit=crop",
+          title: "Roof Cleaning & Coating",
+        },
+        {
+          before: "Oxidized metal surfaces",
+          after: "Mirror-like restoration",
+          beforeUrl: "https://images.unsplash.com/photo-1589939705066-5470fed1a298?w=800&h=600&fit=crop",
+          afterUrl: "https://images.unsplash.com/photo-1585399981826-6a5b48d5ccc8?w=800&h=600&fit=crop",
+          title: "Metal Surface Restoration",
+        },
+      ] as GalleryImage[],
     },
     {
       title: "Commercial Excellence",
       items: [
-        { before: "Industrial wear", after: "Professional restoration" },
-        { before: "Algae-covered surfaces", after: "Brilliant renewal" },
-        { before: "Faded storefront", after: "Like-new appearance" },
-      ],
+        {
+          before: "Industrial wear",
+          after: "Professional restoration",
+          beforeUrl: "https://images.unsplash.com/photo-1486386094519-3192dd97c5e0?w=800&h=600&fit=crop",
+          afterUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop",
+          title: "Commercial Building Restoration",
+        },
+        {
+          before: "Algae-covered surfaces",
+          after: "Brilliant renewal",
+          beforeUrl: "https://images.unsplash.com/photo-1581092162562-40038f56c232?w=800&h=600&fit=crop",
+          afterUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop",
+          title: "Pressure Washing & Renewal",
+        },
+        {
+          before: "Faded storefront",
+          after: "Like-new appearance",
+          beforeUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+          afterUrl: "https://images.unsplash.com/photo-1478860409698-8707f313ee8b?w=800&h=600&fit=crop",
+          title: "Storefront Painting",
+        },
+      ] as GalleryImage[],
     },
   ]
 
