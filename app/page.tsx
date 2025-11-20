@@ -2,14 +2,25 @@
 
 import type React from "react"
 import { useState, useEffect } from "react"
-import { ChevronDown, Phone, Mail, MapPin, Droplet, Palette, Shield, Zap, Award, Users } from "lucide-react"
+import { ChevronDown, Phone, Mail, MapPin, Droplet, Palette, Shield, Zap, Award, Users, X } from "lucide-react"
+
+interface GalleryItem {
+  title: string
+  description: string
+  imageUrl: string
+}
+
+interface ModalImage {
+  src: string
+  alt: string
+}
 
 export default function Home() {
   const [scrollProgress, setScrollProgress] = useState(0)
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
-  const [currentGallerySet, setCurrentGallerySet] = useState(0)
   const [formData, setFormData] = useState({ name: "", phone: "", email: "", service: "", message: "" })
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [previewImage, setPreviewImage] = useState<ModalImage | null>(null)
 
   useEffect(() => {
     const testimonials = [
@@ -87,26 +98,38 @@ export default function Home() {
     },
   ]
 
-  const galleryCategories = [
+  const galleryItems: GalleryItem[] = [
     {
-      title: "Residential Transformations",
-      items: [
-        { before: "Weathered & faded exterior", after: "Pristine, protected finish" },
-        { before: "Stained roof surface", after: "Clean, sealed protection" },
-        { before: "Oxidized metal surfaces", after: "Mirror-like restoration" },
-      ],
+      title: "Pressure Washing & Restoration",
+      description: "Professional high-pressure cleaning and restoration services to bring weathered surfaces back to life. Our team uses state-of-the-art equipment to safely clean driveways, sidewalks, decks, and building exteriors.",
+      imageUrl: "https://images.pexels.com/photos/14023343/pexels-photo-14023343.jpeg",
     },
     {
-      title: "Commercial Excellence",
-      items: [
-        { before: "Industrial wear", after: "Professional restoration" },
-        { before: "Algae-covered surfaces", after: "Brilliant renewal" },
-        { before: "Faded storefront", after: "Like-new appearance" },
-      ],
+      title: "Roof Preservation & Coatings",
+      description: "Advanced coating systems that extend roof life and enhance protection through Louisiana's challenging climate. Our specialized roof treatments prevent algae growth, UV damage, and extend the life of your roof by years.",
+      imageUrl: "https://images.pexels.com/photos/34023076/pexels-photo-34023076.jpeg",
+    },
+    {
+      title: "Premium Exterior Painting",
+      description: "High-quality exterior finishes and accent colors designed to withstand Louisiana's weather conditions. Our painters deliver flawless results with premium paint systems that protect and beautify your property.",
+      imageUrl: "https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg",
+    },
+    {
+      title: "Driveway & Concrete Sealing",
+      description: "Protect your investment with professional concrete sealing and restoration. Our sealers prevent cracking, discoloration, and extend the life of your concrete surfaces while enhancing their appearance.",
+      imageUrl: "https://images.pexels.com/photos/17792954/pexels-photo-17792954.jpeg",
+    },
+    {
+      title: "Metal Surface Protection",
+      description: "Specialized coatings for metal surfaces including railings, gates, and structural elements. Our metal protection systems prevent rust and corrosion while maintaining a polished, professional appearance.",
+      imageUrl: "https://images.pexels.com/photos/13672876/pexels-photo-13672876.jpeg",
+    },
+    {
+      title: "Commercial Building Services",
+      description: "Comprehensive exterior maintenance and protection for commercial properties. From storefront preparation to full-scale industrial coating applications, we deliver professional excellence.",
+      imageUrl: "https://images.pexels.com/photos/11213206/pexels-photo-11213206.jpeg",
     },
   ]
-
-  const currentGallery = galleryCategories[currentGallerySet]
 
   return (
     <main className="bg-white text-slate-900">
@@ -119,10 +142,11 @@ export default function Home() {
       <header className="sticky top-1 z-40 bg-white/95 backdrop-blur-sm border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-900 to-blue-700 rounded-lg flex items-center justify-center">
-              <span className="text-white font-black text-sm">CC</span>
-            </div>
-            <span className="font-black text-lg text-blue-900">COSTELLO</span>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2Fe59e9fce6e5a4081b7f0d28a2c01f6be?format=webp&width=800"
+              alt="Costello Protective Coatings Logo"
+              className="h-10 w-auto object-contain"
+            />
           </div>
           <nav className="hidden md:flex gap-8 text-sm font-semibold">
             <a href="#services" className="text-slate-700 hover:text-blue-700 transition-colors">
@@ -160,9 +184,9 @@ export default function Home() {
           <div className="mb-8 flex justify-center">
             <div className="relative w-72 h-24 drop-shadow-2xl">
               <img
-                src="/images/cost2-removebg-preview.png"
+                src="https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2Fe59e9fce6e5a4081b7f0d28a2c01f6be?format=webp&width=800"
                 alt="Costello Protective Coatings"
-                className="w-full h-full object-contain brightness-0 invert"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>
@@ -324,69 +348,33 @@ export default function Home() {
       <section id="gallery" className="py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-blue-900 mb-4">Before & After Gallery</h2>
+            <h2 className="text-5xl font-black text-blue-900 mb-4">Our Products & Services</h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto shadow-lg shadow-blue-500/40 rounded-full" />
             <p className="text-slate-600 text-lg mt-4 max-w-2xl mx-auto">
-              See the dramatic transformations we've achieved on residential and commercial properties across Acadiana
+              Explore our comprehensive range of protective coating services and solutions designed for Louisiana properties
             </p>
           </div>
 
-          <div className="flex gap-4 justify-center mb-12 flex-wrap">
-            {galleryCategories.map((category, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrentGallerySet(idx)}
-                className={`px-6 py-3 rounded-xl font-bold transition-all duration-300 ${
-                  idx === currentGallerySet
-                    ? "bg-blue-700 text-white shadow-lg shadow-blue-700/50"
-                    : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                }`}
-              >
-                {category.title}
-              </button>
-            ))}
-          </div>
-
           <div className="grid md:grid-cols-3 gap-8">
-            {currentGallery.items.map((item, idx) => (
-              <div key={idx} className="space-y-4">
-                {/* Before */}
-                <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-64 bg-gradient-to-br from-slate-300 to-slate-400 relative flex items-center justify-center">
+            {galleryItems.map((item, idx) => (
+              <div key={idx} className="group">
+                <button
+                  onClick={() => setPreviewImage({ src: item.imageUrl, alt: item.title })}
+                  className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-80 w-full cursor-pointer mb-4"
+                >
                   <img
-                    src={`/before-and-after-transformation.png?height=300&width=400&query=before-${item.before.toLowerCase().replace(/ /g, "-")}`}
-                    alt={`Before: ${item.before}`}
+                    src={item.imageUrl}
+                    alt={item.title}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
-                    <span className="inline-block bg-slate-900/90 text-white px-4 py-2 rounded-lg font-bold text-sm">
-                      Before
-                    </span>
-                    <p className="text-white text-sm mt-2">{item.before}</p>
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-bold">Click to Preview</span>
                   </div>
-                </div>
-
-                {/* Arrow */}
-                <div className="flex justify-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-blue-500 flex items-center justify-center shadow-lg">
-                    <ChevronDown className="text-white" size={24} />
-                  </div>
-                </div>
-
-                {/* After */}
-                <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-64 bg-gradient-to-br from-blue-100 to-blue-50 relative flex items-center justify-center">
-                  <img
-                    src={`/after-.jpg?height=300&width=400&query=after-${item.after.toLowerCase().replace(/ /g, "-")}`}
-                    alt={`After: ${item.after}`}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
-                    <span className="inline-block bg-blue-900/90 text-white px-4 py-2 rounded-lg font-bold text-sm">
-                      After
-                    </span>
-                    <p className="text-white text-sm mt-2">{item.after}</p>
-                  </div>
+                </button>
+                <div className="px-2">
+                  <h3 className="text-xl font-black text-blue-900 mb-3">{item.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -617,10 +605,11 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-12 mb-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-black text-sm">CC</span>
-                </div>
-                <span className="font-black text-lg">COSTELLO</span>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2Fe59e9fce6e5a4081b7f0d28a2c01f6be?format=webp&width=800"
+                  alt="Costello Logo"
+                  className="h-10 w-auto object-contain"
+                />
               </div>
               <p className="text-blue-100 text-sm">Premium protective coatings for Louisiana properties.</p>
             </div>
@@ -664,6 +653,31 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Image Preview Modal */}
+      {previewImage && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+          <div className="relative max-w-4xl max-h-screen w-full h-full flex items-center justify-center">
+            <button
+              onClick={() => setPreviewImage(null)}
+              className="absolute top-4 right-4 z-50 bg-white/10 hover:bg-white/20 text-white rounded-full p-2 transition-all duration-300"
+              aria-label="Close preview"
+            >
+              <X size={28} />
+            </button>
+            <img
+              src={previewImage.src}
+              alt={previewImage.alt}
+              className="w-full h-full object-contain rounded-2xl shadow-2xl"
+            />
+            <button
+              onClick={() => setPreviewImage(null)}
+              className="absolute inset-0 z-0"
+              aria-label="Close preview by clicking outside"
+            />
+          </div>
+        </div>
+      )}
     </main>
   )
 }
