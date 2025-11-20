@@ -680,10 +680,11 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-12 mb-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-black text-sm">CC</span>
-                </div>
-                <span className="font-black text-lg">COSTELLO</span>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2Fe59e9fce6e5a4081b7f0d28a2c01f6be?format=webp&width=800"
+                  alt="Costello Logo"
+                  className="h-10 w-auto object-contain"
+                />
               </div>
               <p className="text-blue-100 text-sm">Premium protective coatings for Louisiana properties.</p>
             </div>
