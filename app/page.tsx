@@ -403,17 +403,27 @@ export default function Home() {
             {galleryItems.map((item, idx) => (
               <div key={idx} className="group">
                 <button
-                  onClick={() => setPreviewImage({ src: item.imageUrl, alt: item.title })}
+                  onClick={() => setPreviewMedia({ src: item.imageUrl, alt: item.title, type: item.mediaType || "image" })}
                   className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-80 w-full cursor-pointer mb-4"
                 >
-                  <img
-                    src={item.imageUrl}
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                  />
+                  {item.mediaType === "video" ? (
+                    <video
+                      src={item.imageUrl}
+                      className="w-full h-full object-cover"
+                      poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 576'%3E%3Crect fill='%23f0f0f0' width='1024' height='576'/%3E%3Ccircle cx='512' cy='288' r='100' fill='%231e40af'/%3E%3Cpolygon points='492,250 492,326 572,288' fill='white'/%3E%3C/svg%3E"
+                    />
+                  ) : (
+                    <img
+                      src={item.imageUrl}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-bold">Click to Preview</span>
+                    <span className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-bold">
+                      {item.mediaType === "video" ? "Play Video" : "Click to Preview"}
+                    </span>
                   </div>
                 </button>
                 <div className="px-2">
