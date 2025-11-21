@@ -105,31 +105,73 @@ export default function Home() {
       title: "Residential Exterior Coating Project",
       description: "Professional protective coating applied to residential home exteriors. Our premium coating systems provide superior weather resistance and long-lasting protection against Louisiana's harsh climate, maintaining color vibrancy and structural integrity.",
       imageUrl: "/picturesprotectivecoatingcostello/IMG_2385.png",
+      mediaType: "image",
     },
     {
       title: "Commercial Building Protection",
       description: "Large-scale protective coating application on commercial properties. We deliver professional-grade coating systems engineered for durability, weather resistance, and aesthetic appeal for businesses across the region.",
       imageUrl: "/picturesprotectivecoatingcostello/b3669cd836d9c1def85744d5c75c53e03a4e51c6-1.jpeg",
+      mediaType: "image",
     },
     {
       title: "Pressure Washing & Surface Restoration",
       description: "Before and after comparison of our high-pressure washing and surface restoration services. We safely remove dirt, mold, and weathering to prepare surfaces for coating application, revealing the true beauty of your property.",
       imageUrl: "/picturesprotectivecoatingcostello/9f1abc2f185e8f0f51ae3034837f41d02e07883b-2.jpeg",
+      mediaType: "image",
     },
     {
       title: "Roof Preservation & Coating Systems",
       description: "Advanced protective coating systems applied to residential roofs. Our specialized roof coatings prevent algae growth, resist UV damage, and significantly extend the lifespan of your roofing investment.",
       imageUrl: "/picturesprotectivecoatingcostello/22347d40a22ddc83509d138162d97da9f54f5d99-4.jpeg",
+      mediaType: "image",
     },
     {
       title: "Premium Exterior Painting & Finishing",
       description: "High-quality exterior painting with premium finishes designed for Louisiana's climate. Our expert painters deliver flawless results with color-fast, weather-resistant paint systems that beautify and protect your property.",
       imageUrl: "/picturesprotectivecoatingcostello/5e1546e681a5785039c73060a2d2b6bfd7970855-2.jpeg",
+      mediaType: "image",
     },
     {
       title: "Property Transformation Showcase",
       description: "Real examples of our protective coating services transforming properties across the region. From residential homes to commercial buildings, we deliver exceptional results that enhance property value and longevity.",
       imageUrl: "/picturesprotectivecoatingcostello/b3669cd836d9c1def85744d5c75c53e03a4e51c6-9.jpeg",
+      mediaType: "image",
+    },
+    {
+      title: "Additional Coating Examples",
+      description: "More examples of our professional protective coating applications. Each project showcases our commitment to quality, durability, and customer satisfaction in protecting valuable properties.",
+      imageUrl: "/picturesprotectivecoatingcostello/22347d40a22ddc83509d138162d97da9f54f5d99-3.jpeg",
+      mediaType: "image",
+    },
+    {
+      title: "Expert Application Process",
+      description: "Detailed view of our expert application techniques and professional craftsmanship. Our trained technicians ensure every surface receives the highest quality coating application for maximum protection and aesthetic appeal.",
+      imageUrl: "/picturesprotectivecoatingcostello/5e1546e681a5785039c73060a2d2b6bfd7970855-1.jpeg",
+      mediaType: "image",
+    },
+    {
+      title: "Before & After Transformation",
+      description: "Striking before and after comparison demonstrating the dramatic impact of our protective coating services. See how we restore and protect properties, bringing them back to their original beauty while adding years to their lifespan.",
+      imageUrl: "/picturesprotectivecoatingcostello/b3669cd836d9c1def85744d5c75c53e03a4e51c6-2.jpeg",
+      mediaType: "image",
+    },
+    {
+      title: "Project Showcase Video",
+      description: "Watch our team in action! This video showcases the professional application of protective coatings on real properties, demonstrating our expertise, attention to detail, and commitment to delivering exceptional results.",
+      imageUrl: "/picturesprotectivecoatingcostello/ScreenRecording_11-21-2025 12-04-48_1.mov",
+      mediaType: "video",
+    },
+    {
+      title: "Durable Coating Solutions",
+      description: "Examples of our long-lasting protective coating solutions applied across different property types and conditions. These projects demonstrate the effectiveness and durability of our coating systems in Louisiana's challenging environment.",
+      imageUrl: "/picturesprotectivecoatingcostello/22347d40a22ddc83509d138162d97da9f54f5d99-2.jpeg",
+      mediaType: "image",
+    },
+    {
+      title: "Finishing Excellence",
+      description: "Close-up views of our premium finishing work showing the quality and precision of our protective coating applications. Every detail matters when we protect your property with our superior coating systems.",
+      imageUrl: "/picturesprotectivecoatingcostello/22347d40a22ddc83509d138162d97da9f54f5d99-5.jpeg",
+      mediaType: "image",
     },
   ]
 
