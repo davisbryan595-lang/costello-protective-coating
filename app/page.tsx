@@ -10,9 +10,10 @@ interface GalleryItem {
   imageUrl: string
 }
 
-interface ModalImage {
+interface PreviewMedia {
   src: string
   alt: string
+  type: "image" | "video"
 }
 
 export default function Home() {
