@@ -8,11 +8,13 @@ interface GalleryItem {
   title: string
   description: string
   imageUrl: string
+  mediaType?: "image" | "video"
 }
 
-interface ModalImage {
+interface PreviewMedia {
   src: string
   alt: string
+  type: "image" | "video"
 }
 
 export default function Home() {
@@ -20,7 +22,7 @@ export default function Home() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const [formData, setFormData] = useState({ name: "", phone: "", email: "", service: "", message: "" })
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [previewImage, setPreviewImage] = useState<ModalImage | null>(null)
+  const [previewMedia, setPreviewMedia] = useState<PreviewMedia | null>(null)
 
   useEffect(() => {
     const testimonials = [
@@ -100,34 +102,76 @@ export default function Home() {
 
   const galleryItems: GalleryItem[] = [
     {
-      title: "Pressure Washing & Restoration",
-      description: "Professional high-pressure cleaning and restoration services to bring weathered surfaces back to life. Our team uses state-of-the-art equipment to safely clean driveways, sidewalks, decks, and building exteriors.",
-      imageUrl: "https://images.pexels.com/photos/14023343/pexels-photo-14023343.jpeg",
+      title: "Residential Exterior Coating Project",
+      description: "Professional protective coating applied to residential home exteriors. Our premium coating systems provide superior weather resistance and long-lasting protection against Louisiana's harsh climate, maintaining color vibrancy and structural integrity.",
+      imageUrl: "/picturesprotectivecoatingcostello/IMG_2385.png",
+      mediaType: "image",
     },
     {
-      title: "Roof Preservation & Coatings",
-      description: "Advanced coating systems that extend roof life and enhance protection through Louisiana's challenging climate. Our specialized roof treatments prevent algae growth, UV damage, and extend the life of your roof by years.",
-      imageUrl: "https://images.pexels.com/photos/34023076/pexels-photo-34023076.jpeg",
+      title: "Commercial Building Protection",
+      description: "Large-scale protective coating application on commercial properties. We deliver professional-grade coating systems engineered for durability, weather resistance, and aesthetic appeal for businesses across the region.",
+      imageUrl: "/picturesprotectivecoatingcostello/b3669cd836d9c1def85744d5c75c53e03a4e51c6-1.jpeg",
+      mediaType: "image",
     },
     {
-      title: "Premium Exterior Painting",
-      description: "High-quality exterior finishes and accent colors designed to withstand Louisiana's weather conditions. Our painters deliver flawless results with premium paint systems that protect and beautify your property.",
-      imageUrl: "https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg",
+      title: "Pressure Washing & Surface Restoration",
+      description: "Before and after comparison of our high-pressure washing and surface restoration services. We safely remove dirt, mold, and weathering to prepare surfaces for coating application, revealing the true beauty of your property.",
+      imageUrl: "/picturesprotectivecoatingcostello/9f1abc2f185e8f0f51ae3034837f41d02e07883b-2.jpeg",
+      mediaType: "image",
     },
     {
-      title: "Driveway & Concrete Sealing",
-      description: "Protect your investment with professional concrete sealing and restoration. Our sealers prevent cracking, discoloration, and extend the life of your concrete surfaces while enhancing their appearance.",
-      imageUrl: "https://images.pexels.com/photos/17792954/pexels-photo-17792954.jpeg",
+      title: "Roof Preservation & Coating Systems",
+      description: "Advanced protective coating systems applied to residential roofs. Our specialized roof coatings prevent algae growth, resist UV damage, and significantly extend the lifespan of your roofing investment.",
+      imageUrl: "/picturesprotectivecoatingcostello/22347d40a22ddc83509d138162d97da9f54f5d99-4.jpeg",
+      mediaType: "image",
     },
     {
-      title: "Metal Surface Protection",
-      description: "Specialized coatings for metal surfaces including railings, gates, and structural elements. Our metal protection systems prevent rust and corrosion while maintaining a polished, professional appearance.",
-      imageUrl: "https://images.pexels.com/photos/13672876/pexels-photo-13672876.jpeg",
+      title: "Premium Exterior Painting & Finishing",
+      description: "High-quality exterior painting with premium finishes designed for Louisiana's climate. Our expert painters deliver flawless results with color-fast, weather-resistant paint systems that beautify and protect your property.",
+      imageUrl: "/picturesprotectivecoatingcostello/5e1546e681a5785039c73060a2d2b6bfd7970855-2.jpeg",
+      mediaType: "image",
     },
     {
-      title: "Commercial Building Services",
-      description: "Comprehensive exterior maintenance and protection for commercial properties. From storefront preparation to full-scale industrial coating applications, we deliver professional excellence.",
-      imageUrl: "https://images.pexels.com/photos/11213206/pexels-photo-11213206.jpeg",
+      title: "Property Transformation Showcase",
+      description: "Real examples of our protective coating services transforming properties across the region. From residential homes to commercial buildings, we deliver exceptional results that enhance property value and longevity.",
+      imageUrl: "/picturesprotectivecoatingcostello/b3669cd836d9c1def85744d5c75c53e03a4e51c6-9.jpeg",
+      mediaType: "image",
+    },
+    {
+      title: "Additional Coating Examples",
+      description: "More examples of our professional protective coating applications. Each project showcases our commitment to quality, durability, and customer satisfaction in protecting valuable properties.",
+      imageUrl: "/picturesprotectivecoatingcostello/22347d40a22ddc83509d138162d97da9f54f5d99-3.jpeg",
+      mediaType: "image",
+    },
+    {
+      title: "Expert Application Process",
+      description: "Detailed view of our expert application techniques and professional craftsmanship. Our trained technicians ensure every surface receives the highest quality coating application for maximum protection and aesthetic appeal.",
+      imageUrl: "/picturesprotectivecoatingcostello/5e1546e681a5785039c73060a2d2b6bfd7970855-1.jpeg",
+      mediaType: "image",
+    },
+    {
+      title: "Before & After Transformation",
+      description: "Striking before and after comparison demonstrating the dramatic impact of our protective coating services. See how we restore and protect properties, bringing them back to their original beauty while adding years to their lifespan.",
+      imageUrl: "/picturesprotectivecoatingcostello/b3669cd836d9c1def85744d5c75c53e03a4e51c6-2.jpeg",
+      mediaType: "image",
+    },
+    {
+      title: "Project Showcase Video",
+      description: "Watch our team in action! This video showcases the professional application of protective coatings on real properties, demonstrating our expertise, attention to detail, and commitment to delivering exceptional results.",
+      imageUrl: "/picturesprotectivecoatingcostello/ScreenRecording_11-21-2025 12-04-48_1.mov",
+      mediaType: "video",
+    },
+    {
+      title: "Durable Coating Solutions",
+      description: "Examples of our long-lasting protective coating solutions applied across different property types and conditions. These projects demonstrate the effectiveness and durability of our coating systems in Louisiana's challenging environment.",
+      imageUrl: "/picturesprotectivecoatingcostello/22347d40a22ddc83509d138162d97da9f54f5d99-2.jpeg",
+      mediaType: "image",
+    },
+    {
+      title: "Finishing Excellence",
+      description: "Close-up views of our premium finishing work showing the quality and precision of our protective coating applications. Every detail matters when we protect your property with our superior coating systems.",
+      imageUrl: "/picturesprotectivecoatingcostello/22347d40a22ddc83509d138162d97da9f54f5d99-5.jpeg",
+      mediaType: "image",
     },
   ]
 
@@ -359,17 +403,27 @@ export default function Home() {
             {galleryItems.map((item, idx) => (
               <div key={idx} className="group">
                 <button
-                  onClick={() => setPreviewImage({ src: item.imageUrl, alt: item.title })}
+                  onClick={() => setPreviewMedia({ src: item.imageUrl, alt: item.title, type: item.mediaType || "image" })}
                   className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-80 w-full cursor-pointer mb-4"
                 >
-                  <img
-                    src={item.imageUrl}
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                  />
+                  {item.mediaType === "video" ? (
+                    <video
+                      src={item.imageUrl}
+                      className="w-full h-full object-cover"
+                      poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 576'%3E%3Crect fill='%23f0f0f0' width='1024' height='576'/%3E%3Ccircle cx='512' cy='288' r='100' fill='%231e40af'/%3E%3Cpolygon points='492,250 492,326 572,288' fill='white'/%3E%3C/svg%3E"
+                    />
+                  ) : (
+                    <img
+                      src={item.imageUrl}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-bold">Click to Preview</span>
+                    <span className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-bold">
+                      {item.mediaType === "video" ? "Play Video" : "Click to Preview"}
+                    </span>
                   </div>
                 </button>
                 <div className="px-2">
@@ -654,24 +708,33 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Image Preview Modal */}
-      {previewImage && (
+      {/* Media Preview Modal */}
+      {previewMedia && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
           <div className="relative max-w-4xl max-h-screen w-full h-full flex items-center justify-center">
             <button
-              onClick={() => setPreviewImage(null)}
+              onClick={() => setPreviewMedia(null)}
               className="absolute top-4 right-4 z-50 bg-white/10 hover:bg-white/20 text-white rounded-full p-2 transition-all duration-300"
               aria-label="Close preview"
             >
               <X size={28} />
             </button>
-            <img
-              src={previewImage.src}
-              alt={previewImage.alt}
-              className="w-full h-full object-contain rounded-2xl shadow-2xl"
-            />
+            {previewMedia.type === "video" ? (
+              <video
+                src={previewMedia.src}
+                className="w-full h-full object-contain rounded-2xl shadow-2xl"
+                controls
+                autoPlay
+              />
+            ) : (
+              <img
+                src={previewMedia.src}
+                alt={previewMedia.alt}
+                className="w-full h-full object-contain rounded-2xl shadow-2xl"
+              />
+            )}
             <button
-              onClick={() => setPreviewImage(null)}
+              onClick={() => setPreviewMedia(null)}
               className="absolute inset-0 z-0"
               aria-label="Close preview by clicking outside"
             />
