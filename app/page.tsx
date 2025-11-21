@@ -410,7 +410,7 @@ export default function Home() {
                     <video
                       src={item.imageUrl}
                       className="w-full h-full object-cover"
-                      poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 576'%3E%3Crect fill='%23f0f0f0' width='1024' height='576'/%3E%3Ccircle cx='512' cy='288' r='100' fill='%231e40af'/%3E%3Cpolygon points='492,250 492,326 572,288' fill='white'/%3E%3C/svg%3E"
+                      poster="https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2F86334f8df462482eb635ab4991a1a747?format=webp&width=800"
                     />
                   ) : (
                     <img
