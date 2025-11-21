@@ -8,6 +8,7 @@ interface GalleryItem {
   title: string
   description: string
   imageUrl: string
+  mediaType?: "image" | "video"
 }
 
 interface PreviewMedia {
