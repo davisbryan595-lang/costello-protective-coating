@@ -410,7 +410,7 @@ export default function Home() {
                     <video
                       src={item.imageUrl}
                       className="w-full h-full object-cover"
-                      poster="/picturesprotectivecoatingcostello/b3669cd836d9c1def85744d5c75c53e03a4e51c6-1.jpeg"
+                      poster="https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2F86334f8df462482eb635ab4991a1a747?format=webp&width=800"
                     />
                   ) : (
                     <img
