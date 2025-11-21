@@ -22,7 +22,7 @@ export default function Home() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const [formData, setFormData] = useState({ name: "", phone: "", email: "", service: "", message: "" })
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [previewImage, setPreviewImage] = useState<ModalImage | null>(null)
+  const [previewMedia, setPreviewMedia] = useState<PreviewMedia | null>(null)
 
   useEffect(() => {
     const testimonials = [
