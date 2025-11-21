@@ -410,7 +410,7 @@ export default function Home() {
                     <video
                       src={item.imageUrl}
                       className="w-full h-full object-cover"
-                      poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 576'%3E%3Crect fill='%23f0f0f0' width='1024' height='576'/%3E%3Ccircle cx='512' cy='288' r='100' fill='%231e40af'/%3E%3Cpolygon points='492,250 492,326 572,288' fill='white'/%3E%3C/svg%3E"
+                      poster="/picturesprotectivecoatingcostello/b3669cd836d9c1def85744d5c75c53e03a4e51c6-1.jpeg"
                     />
                   ) : (
                     <img
