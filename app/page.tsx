@@ -100,34 +100,34 @@ export default function Home() {
 
   const galleryItems: GalleryItem[] = [
     {
-      title: "Pressure Washing & Restoration",
-      description: "Professional high-pressure cleaning and restoration services to bring weathered surfaces back to life. Our team uses state-of-the-art equipment to safely clean driveways, sidewalks, decks, and building exteriors.",
-      imageUrl: "https://images.pexels.com/photos/14023343/pexels-photo-14023343.jpeg",
+      title: "Residential Exterior Coating Project",
+      description: "Professional protective coating applied to residential home exteriors. Our premium coating systems provide superior weather resistance and long-lasting protection against Louisiana's harsh climate, maintaining color vibrancy and structural integrity.",
+      imageUrl: "/picturesprotectivecoatingcostello/IMG_2385.png",
     },
     {
-      title: "Roof Preservation & Coatings",
-      description: "Advanced coating systems that extend roof life and enhance protection through Louisiana's challenging climate. Our specialized roof treatments prevent algae growth, UV damage, and extend the life of your roof by years.",
-      imageUrl: "https://images.pexels.com/photos/34023076/pexels-photo-34023076.jpeg",
+      title: "Commercial Building Protection",
+      description: "Large-scale protective coating application on commercial properties. We deliver professional-grade coating systems engineered for durability, weather resistance, and aesthetic appeal for businesses across the region.",
+      imageUrl: "/picturesprotectivecoatingcostello/b3669cd836d9c1def85744d5c75c53e03a4e51c6-1.jpeg",
     },
     {
-      title: "Premium Exterior Painting",
-      description: "High-quality exterior finishes and accent colors designed to withstand Louisiana's weather conditions. Our painters deliver flawless results with premium paint systems that protect and beautify your property.",
-      imageUrl: "https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg",
+      title: "Pressure Washing & Surface Restoration",
+      description: "Before and after comparison of our high-pressure washing and surface restoration services. We safely remove dirt, mold, and weathering to prepare surfaces for coating application, revealing the true beauty of your property.",
+      imageUrl: "/picturesprotectivecoatingcostello/9f1abc2f185e8f0f51ae3034837f41d02e07883b-2.jpeg",
     },
     {
-      title: "Driveway & Concrete Sealing",
-      description: "Protect your investment with professional concrete sealing and restoration. Our sealers prevent cracking, discoloration, and extend the life of your concrete surfaces while enhancing their appearance.",
-      imageUrl: "https://images.pexels.com/photos/17792954/pexels-photo-17792954.jpeg",
+      title: "Roof Preservation & Coating Systems",
+      description: "Advanced protective coating systems applied to residential roofs. Our specialized roof coatings prevent algae growth, resist UV damage, and significantly extend the lifespan of your roofing investment.",
+      imageUrl: "/picturesprotectivecoatingcostello/22347d40a22ddc83509d138162d97da9f54f5d99-4.jpeg",
     },
     {
-      title: "Metal Surface Protection",
-      description: "Specialized coatings for metal surfaces including railings, gates, and structural elements. Our metal protection systems prevent rust and corrosion while maintaining a polished, professional appearance.",
-      imageUrl: "https://images.pexels.com/photos/13672876/pexels-photo-13672876.jpeg",
+      title: "Premium Exterior Painting & Finishing",
+      description: "High-quality exterior painting with premium finishes designed for Louisiana's climate. Our expert painters deliver flawless results with color-fast, weather-resistant paint systems that beautify and protect your property.",
+      imageUrl: "/picturesprotectivecoatingcostello/5e1546e681a5785039c73060a2d2b6bfd7970855-2.jpeg",
     },
     {
-      title: "Commercial Building Services",
-      description: "Comprehensive exterior maintenance and protection for commercial properties. From storefront preparation to full-scale industrial coating applications, we deliver professional excellence.",
-      imageUrl: "https://images.pexels.com/photos/11213206/pexels-photo-11213206.jpeg",
+      title: "Property Transformation Showcase",
+      description: "Real examples of our protective coating services transforming properties across the region. From residential homes to commercial buildings, we deliver exceptional results that enhance property value and longevity.",
+      imageUrl: "/picturesprotectivecoatingcostello/b3669cd836d9c1def85744d5c75c53e03a4e51c6-9.jpeg",
     },
   ]
 
