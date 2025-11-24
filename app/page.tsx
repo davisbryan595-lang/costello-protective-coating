@@ -350,38 +350,48 @@ export default function Home() {
             <div className="w-24 h-1.5 bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400 mx-auto shadow-lg shadow-blue-400/50 rounded-full" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Service 1 */}
-            <div className="group backdrop-blur-md bg-white/10 border border-white/20 p-8 rounded-2xl hover:bg-white/15 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2">
-              <div className="bg-gradient-to-br from-blue-400 to-blue-500 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <Droplet className="text-white" size={32} />
-              </div>
-              <h3 className="text-2xl font-black text-white mb-3">Pressure Washing & Restoration</h3>
-              <p className="text-blue-100 leading-relaxed">
-                Professional high-pressure cleaning and restoration services to bring weathered surfaces back to life.
-              </p>
-            </div>
-
-            {/* Service 2 */}
-            <div className="group backdrop-blur-md bg-white/10 border border-white/20 p-8 rounded-2xl hover:bg-white/15 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2">
-              <div className="bg-gradient-to-br from-blue-400 to-blue-500 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <Shield className="text-white" size={32} />
-              </div>
-              <h3 className="text-2xl font-black text-white mb-3">Roof Preservation & Coatings</h3>
-              <p className="text-blue-100 leading-relaxed">
-                Advanced coating systems that extend roof life and enhance protection through Louisiana's challenging
-                climate.
-              </p>
-            </div>
-
-            {/* Service 3 */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Service 1: Elastomeric */}
             <div className="group backdrop-blur-md bg-white/10 border border-white/20 p-8 rounded-2xl hover:bg-white/15 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2">
               <div className="bg-gradient-to-br from-blue-400 to-blue-500 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <Palette className="text-white" size={32} />
               </div>
-              <h3 className="text-2xl font-black text-white mb-3">Premium Exterior Painting</h3>
+              <h3 className="text-2xl font-black text-white mb-3">Elastomeric Coatings</h3>
               <p className="text-blue-100 leading-relaxed">
-                High-quality exterior finishes and accent colors designed to withstand Louisiana's weather.
+                Premium white elastomeric paint and protective coating systems. Perfect for residential and commercial properties across the Midwest and South. Provides excellent UV protection and weather resistance.
+              </p>
+            </div>
+
+            {/* Service 2: Farm Painting */}
+            <div className="group backdrop-blur-md bg-white/10 border border-white/20 p-8 rounded-2xl hover:bg-white/15 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2">
+              <div className="bg-gradient-to-br from-blue-400 to-blue-500 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <Shield className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-black text-white mb-3">Farm Painting & Aluminum Coatings</h3>
+              <p className="text-blue-100 leading-relaxed">
+                Specialized painting for barns, farm structures, and aluminum surfaces. Our durable aluminum coatings protect agricultural buildings from harsh weather conditions and extend their lifespan.
+              </p>
+            </div>
+
+            {/* Service 3: Residential Painting */}
+            <div className="group backdrop-blur-md bg-white/10 border border-white/20 p-8 rounded-2xl hover:bg-white/15 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2">
+              <div className="bg-gradient-to-br from-blue-400 to-blue-500 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <Droplet className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-black text-white mb-3">Residential Painting & Roof Preservation</h3>
+              <p className="text-blue-100 leading-relaxed">
+                Professional residential painting and roof preservation services for homes. Our expert application ensures beautiful, long-lasting results with advanced coating systems designed for any climate.
+              </p>
+            </div>
+
+            {/* Service 4: Industrial Painting */}
+            <div className="group backdrop-blur-md bg-white/10 border border-white/20 p-8 rounded-2xl hover:bg-white/15 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2">
+              <div className="bg-gradient-to-br from-blue-400 to-blue-500 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <Zap className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-black text-white mb-3">Industrial Coating Solutions</h3>
+              <p className="text-blue-100 leading-relaxed">
+                Heavy-duty protective coatings for industrial buildings, tanks, and large-scale commercial structures. Our industrial-grade systems provide superior durability and long-term protection.
               </p>
             </div>
           </div>
