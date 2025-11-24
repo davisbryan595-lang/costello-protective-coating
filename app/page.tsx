@@ -707,7 +707,7 @@ export default function Home() {
               <ul className="space-y-2 text-sm text-blue-100">
                 <li>📞 +1 (337) 567-6072</li>
                 <li>📧 info@costello.com</li>
-                <li>📍 Lafayette, LA & Surrounding Areas</li>
+                <li>📍 Serving Multiple States: IA, LA, MO, AR, MS</li>
               </ul>
             </div>
           </div>
