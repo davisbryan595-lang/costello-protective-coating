@@ -288,7 +288,7 @@ export default function Home() {
               <div className="w-16 h-1.5 bg-gradient-to-r from-blue-600 to-blue-400 mb-8 rounded-full" />
 
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                With over 15 years of experience protecting Louisiana properties, Costello Protective Coatings combines
+                With over 15 years of experience protecting properties across the Midwest and South, Costello Protective Coatings combines
                 premium materials with expert craftsmanship. Our proven coating systems withstand the region's
                 challenging climate while maintaining their pristine appearance.
               </p>
