@@ -655,7 +655,7 @@ export default function Home() {
                     <MapPin className="text-white" size={24} />
                   </div>
                   <p className="text-blue-100 mb-2 font-semibold">Service Area</p>
-                  <p className="text-blue-300 font-bold">Lafayette & Acadiana Region</p>
+                  <p className="text-blue-300 font-bold">Iowa, Louisiana, Missouri, Arkansas, Mississippi</p>
                 </div>
               </div>
             </div>
