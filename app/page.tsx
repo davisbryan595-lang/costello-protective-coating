@@ -672,7 +672,7 @@ export default function Home() {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2Fe59e9fce6e5a4081b7f0d28a2c01f6be?format=webp&width=800"
                   alt="Costello Logo"
-                  className="h-10 w-auto object-contain"
+                  className="h-16 w-auto object-contain"
                 />
               </div>
               <p className="text-blue-100 text-sm">Premium protective coatings for Louisiana properties.</p>
