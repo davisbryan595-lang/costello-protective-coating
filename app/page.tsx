@@ -103,7 +103,7 @@ export default function Home() {
   const galleryItems: GalleryItem[] = [
     {
       title: "Residential Exterior Coating Project",
-      description: "Professional protective coating applied to residential home exteriors. Our premium coating systems provide superior weather resistance and long-lasting protection against Louisiana's harsh climate, maintaining color vibrancy and structural integrity.",
+      description: "Professional protective coating applied to residential home exteriors. Our premium coating systems provide superior weather resistance and long-lasting protection, maintaining color vibrancy and structural integrity.",
       imageUrl: "/picturesprotectivecoatingcostello/IMG_2385.png",
       mediaType: "image",
     },
