@@ -243,8 +243,8 @@ export default function Home() {
           <div className="w-32 h-1.5 bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400 mx-auto mb-8 shadow-xl shadow-blue-400/50 rounded-full" />
 
           <p className="text-xl md:text-2xl text-blue-100 mb-12 leading-relaxed max-w-2xl mx-auto drop-shadow-lg">
-            Professional protective coatings, pressure washing, and restoration services for Louisiana properties.
-            Serving Lafayette and surrounding areas with excellence.
+            Professional protective coatings, pressure washing, and restoration services across the Midwest and South.
+            Serving Iowa, Louisiana, Missouri, Arkansas, and Mississippi with excellence.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
