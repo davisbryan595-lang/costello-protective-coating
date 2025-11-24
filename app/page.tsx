@@ -405,7 +405,7 @@ export default function Home() {
             <h2 className="text-5xl font-black text-blue-900 mb-4">Our Products & Services</h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto shadow-lg shadow-blue-500/40 rounded-full" />
             <p className="text-slate-600 text-lg mt-4 max-w-2xl mx-auto">
-              Explore our comprehensive range of protective coating services and solutions designed for Louisiana properties
+              Explore our comprehensive range of protective coating services and solutions across the Midwest and South
             </p>
           </div>
 
