@@ -500,7 +500,7 @@ export default function Home() {
       {/* Why Choose Us Section */}
       <section className="py-24 px-4 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-black text-blue-900 text-center mb-16">Why Louisiana Trusts Costello</h2>
+          <h2 className="text-4xl font-black text-blue-900 text-center mb-16">Why Customers Trust Costello</h2>
 
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
