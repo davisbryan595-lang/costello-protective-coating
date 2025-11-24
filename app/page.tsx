@@ -138,6 +138,12 @@ export default function Home() {
       mediaType: "image",
     },
     {
+      title: "Industrial Tank Protection & Coating",
+      description: "Professional protective coating systems for industrial storage tanks and large-scale structures. Our industrial-grade coatings provide superior durability and long-term protection against corrosion and weathering.",
+      imageUrl: "https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2F11e76174835a48669abd13e11e0a77d8?format=webp&width=800",
+      mediaType: "image",
+    },
+    {
       title: "Additional Coating Examples",
       description: "More examples of our professional protective coating applications. Each project showcases our commitment to quality, durability, and customer satisfaction in protecting valuable properties.",
       imageUrl: "/picturesprotectivecoatingcostello/22347d40a22ddc83509d138162d97da9f54f5d99-3.jpeg",
