@@ -28,7 +28,7 @@ export default function Home() {
     const testimonials = [
       {
         text: "Costello transformed our home's exterior completely. The attention to detail and professionalism exceeded our expectations.",
-        client: "— Michael L., Lafayette",
+        client: "— Michael L., Iowa",
         rating: 5,
       },
       {
@@ -38,7 +38,7 @@ export default function Home() {
       },
       {
         text: "Professional team, exceptional results. They made the entire process seamless and stress-free from start to finish.",
-        client: "— James P., Baton Rouge",
+        client: "— James P., Louisiana",
         rating: 5,
       },
       {
