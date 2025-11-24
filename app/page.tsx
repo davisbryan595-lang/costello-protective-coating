@@ -228,7 +228,7 @@ export default function Home() {
           <div className="mb-8 flex justify-center">
             <div className="relative w-72 h-24 drop-shadow-2xl">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2Fe59e9fce6e5a4081b7f0d28a2c01f6be?format=webp&width=800"
+                src="/image__1_-removebg-preview.png"
                 alt="Costello Protective Coatings"
                 className="w-full h-full object-contain"
               />
