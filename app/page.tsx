@@ -133,8 +133,8 @@ export default function Home() {
     },
     {
       title: "Property Transformation Showcase",
-      description: "Real examples of our protective coating services transforming properties across the region. From residential homes to commercial buildings, we deliver exceptional results that enhance property value and longevity.",
-      imageUrl: "/picturesprotectivecoatingcostello/b3669cd836d9c1def85744d5c75c53e03a4e51c6-9.jpeg",
+      description: "Real examples of our protective coating services transforming properties across the region. From residential homes to commercial buildings to industrial tanks, we deliver exceptional results that enhance property value and longevity.",
+      imageUrl: "https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2F11e76174835a48669abd13e11e0a77d8?format=webp&width=800",
       mediaType: "image",
     },
     {
