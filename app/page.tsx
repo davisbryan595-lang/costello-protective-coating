@@ -416,38 +416,54 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {galleryItems.map((item, idx) => (
-              <div key={idx} className="group">
-                <button
-                  onClick={() => setPreviewMedia({ src: item.imageUrl, alt: item.title, type: item.mediaType || "image" })}
-                  className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-80 w-full cursor-pointer mb-4"
-                >
-                  {item.mediaType === "video" ? (
-                    <video
-                      src={item.imageUrl}
-                      className="w-full h-full object-cover"
-                      poster="https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2F86334f8df462482eb635ab4991a1a747?format=webp&width=800"
-                    />
-                  ) : (
-                    <img
-                      src={item.imageUrl}
-                      alt={item.title}
-                      className="w-full h-full object-cover"
-                    />
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-bold">
-                      {item.mediaType === "video" ? "Play Video" : "Click to Preview"}
-                    </span>
+            {galleryItems.map((item, idx) => {
+              const categoryMap: { [key: string]: string } = {
+                "Residential Exterior": "Residential Painting",
+                "Roof Preservation": "Residential Painting",
+                "Premium Exterior": "Residential Painting",
+                "Farm Painting": "Farm Painting",
+                "Industrial Tank": "Industrial Painting",
+                "Commercial Building": "Industrial Painting",
+                "Pressure Washing": "Elastomeric",
+              }
+              const category = Object.entries(categoryMap).find(([key]) => item.title.includes(key))?.[1] || "Featured"
+
+              return (
+                <div key={idx} className="group">
+                  <div className="mb-2">
+                    <span className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold">{category}</span>
                   </div>
-                </button>
-                <div className="px-2">
-                  <h3 className="text-xl font-black text-blue-900 mb-3">{item.title}</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">{item.description}</p>
+                  <button
+                    onClick={() => setPreviewMedia({ src: item.imageUrl, alt: item.title, type: item.mediaType || "image" })}
+                    className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-80 w-full cursor-pointer mb-4"
+                  >
+                    {item.mediaType === "video" ? (
+                      <video
+                        src={item.imageUrl}
+                        className="w-full h-full object-cover"
+                        poster="https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2F86334f8df462482eb635ab4991a1a747?format=webp&width=800"
+                      />
+                    ) : (
+                      <img
+                        src={item.imageUrl}
+                        alt={item.title}
+                        className="w-full h-full object-cover"
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-bold">
+                        {item.mediaType === "video" ? "Play Video" : "Click to Preview"}
+                      </span>
+                    </div>
+                  </button>
+                  <div className="px-2">
+                    <h3 className="text-xl font-black text-blue-900 mb-3">{item.title}</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">{item.description}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
