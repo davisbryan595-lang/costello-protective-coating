@@ -226,11 +226,11 @@ export default function Home() {
 
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <div className="mb-8 flex justify-center">
-            <div className="relative w-72 h-24 drop-shadow-2xl">
+            <div className="relative w-96 h-32 drop-shadow-2xl">
               <img
                 src="/image__1_-removebg-preview.png"
                 alt="Costello Protective Coatings"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain filter brightness-0 invert"
               />
             </div>
           </div>
