@@ -43,7 +43,7 @@ export default function Home() {
       },
       {
         text: "Outstanding service! The before and after difference is remarkable. Highly recommend Costello to anyone.",
-        client: "— Jennifer T., New Iberia",
+        client: "— Jennifer T., Arkansas",
         rating: 5,
       },
     ]
