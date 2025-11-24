@@ -28,22 +28,22 @@ export default function Home() {
     const testimonials = [
       {
         text: "Costello transformed our home's exterior completely. The attention to detail and professionalism exceeded our expectations.",
-        client: "— Michael L., Lafayette",
+        client: "— Michael L., Iowa",
         rating: 5,
       },
       {
-        text: "Best investment we've made for our property's protection. The coating has held up perfectly through Louisiana summers.",
-        client: "— Sarah K., Acadiana",
+        text: "Best investment we've made for our property's protection. The coating has held up perfectly through harsh weather and extreme conditions.",
+        client: "— Sarah K., Missouri",
         rating: 5,
       },
       {
         text: "Professional team, exceptional results. They made the entire process seamless and stress-free from start to finish.",
-        client: "— James P., Baton Rouge",
+        client: "— James P., Louisiana",
         rating: 5,
       },
       {
         text: "Outstanding service! The before and after difference is remarkable. Highly recommend Costello to anyone.",
-        client: "— Jennifer T., New Iberia",
+        client: "— Jennifer T., Arkansas",
         rating: 5,
       },
     ]
@@ -80,22 +80,22 @@ export default function Home() {
   const testimonials = [
     {
       text: "Costello transformed our home's exterior completely. The attention to detail and professionalism exceeded our expectations.",
-      client: "— Michael L., Lafayette",
+      client: "— Michael L., Iowa",
       rating: 5,
     },
     {
-      text: "Best investment we've made for our property's protection. The coating has held up perfectly through Louisiana summers.",
-      client: "— Sarah K., Acadiana",
+      text: "Best investment we've made for our property's protection. The coating has held up perfectly through harsh weather and extreme conditions.",
+      client: "— Sarah K., Missouri",
       rating: 5,
     },
     {
       text: "Professional team, exceptional results. They made the entire process seamless and stress-free from start to finish.",
-      client: "— James P., Baton Rouge",
+      client: "— James P., Louisiana",
       rating: 5,
     },
     {
       text: "Outstanding service! The before and after difference is remarkable. Highly recommend Costello to anyone.",
-      client: "— Jennifer T., New Iberia",
+      client: "— Jennifer T., Arkansas",
       rating: 5,
     },
   ]
@@ -103,7 +103,7 @@ export default function Home() {
   const galleryItems: GalleryItem[] = [
     {
       title: "Residential Exterior Coating Project",
-      description: "Professional protective coating applied to residential home exteriors. Our premium coating systems provide superior weather resistance and long-lasting protection against Louisiana's harsh climate, maintaining color vibrancy and structural integrity.",
+      description: "Professional protective coating applied to residential home exteriors. Our premium coating systems provide superior weather resistance and long-lasting protection, maintaining color vibrancy and structural integrity.",
       imageUrl: "/picturesprotectivecoatingcostello/IMG_2385.png",
       mediaType: "image",
     },
@@ -133,8 +133,14 @@ export default function Home() {
     },
     {
       title: "Property Transformation Showcase",
-      description: "Real examples of our protective coating services transforming properties across the region. From residential homes to commercial buildings, we deliver exceptional results that enhance property value and longevity.",
-      imageUrl: "/picturesprotectivecoatingcostello/b3669cd836d9c1def85744d5c75c53e03a4e51c6-9.jpeg",
+      description: "Real examples of our protective coating services transforming properties across the region. From residential homes to commercial buildings to industrial tanks, we deliver exceptional results that enhance property value and longevity.",
+      imageUrl: "https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2F11e76174835a48669abd13e11e0a77d8?format=webp&width=800",
+      mediaType: "image",
+    },
+    {
+      title: "Industrial Tank Protection & Coating",
+      description: "Professional protective coating systems for industrial storage tanks and large-scale structures. Our industrial-grade coatings provide superior durability and long-term protection against corrosion and weathering.",
+      imageUrl: "https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2F11e76174835a48669abd13e11e0a77d8?format=webp&width=800",
       mediaType: "image",
     },
     {
@@ -189,7 +195,7 @@ export default function Home() {
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2Fe59e9fce6e5a4081b7f0d28a2c01f6be?format=webp&width=800"
               alt="Costello Protective Coatings Logo"
-              className="h-20 w-auto object-contain"
+              className="h-24 w-auto object-contain"
             />
           </a>
           <nav className="hidden md:flex gap-8 text-sm font-semibold">
@@ -226,11 +232,11 @@ export default function Home() {
 
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <div className="mb-8 flex justify-center">
-            <div className="relative w-72 h-24 drop-shadow-2xl">
+            <div className="relative w-96 h-32 drop-shadow-2xl">
               <img
                 src="/image__1_-removebg-preview.png"
                 alt="Costello Protective Coatings"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain filter brightness-0 invert"
               />
             </div>
           </div>
@@ -243,8 +249,8 @@ export default function Home() {
           <div className="w-32 h-1.5 bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400 mx-auto mb-8 shadow-xl shadow-blue-400/50 rounded-full" />
 
           <p className="text-xl md:text-2xl text-blue-100 mb-12 leading-relaxed max-w-2xl mx-auto drop-shadow-lg">
-            Professional protective coatings, pressure washing, and restoration services for Louisiana properties.
-            Serving Lafayette and surrounding areas with excellence.
+            Professional protective coatings, pressure washing, and restoration services across the Midwest and South.
+            Serving Iowa, Louisiana, Missouri, Arkansas, and Mississippi with excellence.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -288,7 +294,7 @@ export default function Home() {
               <div className="w-16 h-1.5 bg-gradient-to-r from-blue-600 to-blue-400 mb-8 rounded-full" />
 
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                With over 15 years of experience protecting Louisiana properties, Costello Protective Coatings combines
+                With over 15 years of experience protecting properties across the Midwest and South, Costello Protective Coatings combines
                 premium materials with expert craftsmanship. Our proven coating systems withstand the region's
                 challenging climate while maintaining their pristine appearance.
               </p>
@@ -350,38 +356,48 @@ export default function Home() {
             <div className="w-24 h-1.5 bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400 mx-auto shadow-lg shadow-blue-400/50 rounded-full" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Service 1 */}
-            <div className="group backdrop-blur-md bg-white/10 border border-white/20 p-8 rounded-2xl hover:bg-white/15 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2">
-              <div className="bg-gradient-to-br from-blue-400 to-blue-500 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <Droplet className="text-white" size={32} />
-              </div>
-              <h3 className="text-2xl font-black text-white mb-3">Pressure Washing & Restoration</h3>
-              <p className="text-blue-100 leading-relaxed">
-                Professional high-pressure cleaning and restoration services to bring weathered surfaces back to life.
-              </p>
-            </div>
-
-            {/* Service 2 */}
-            <div className="group backdrop-blur-md bg-white/10 border border-white/20 p-8 rounded-2xl hover:bg-white/15 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2">
-              <div className="bg-gradient-to-br from-blue-400 to-blue-500 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <Shield className="text-white" size={32} />
-              </div>
-              <h3 className="text-2xl font-black text-white mb-3">Roof Preservation & Coatings</h3>
-              <p className="text-blue-100 leading-relaxed">
-                Advanced coating systems that extend roof life and enhance protection through Louisiana's challenging
-                climate.
-              </p>
-            </div>
-
-            {/* Service 3 */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Service 1: Elastomeric */}
             <div className="group backdrop-blur-md bg-white/10 border border-white/20 p-8 rounded-2xl hover:bg-white/15 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2">
               <div className="bg-gradient-to-br from-blue-400 to-blue-500 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <Palette className="text-white" size={32} />
               </div>
-              <h3 className="text-2xl font-black text-white mb-3">Premium Exterior Painting</h3>
+              <h3 className="text-2xl font-black text-white mb-3">Elastomeric Coatings</h3>
               <p className="text-blue-100 leading-relaxed">
-                High-quality exterior finishes and accent colors designed to withstand Louisiana's weather.
+                Premium white elastomeric paint and protective coating systems. Perfect for residential and commercial properties across the Midwest and South. Provides excellent UV protection and weather resistance.
+              </p>
+            </div>
+
+            {/* Service 2: Farm Painting */}
+            <div className="group backdrop-blur-md bg-white/10 border border-white/20 p-8 rounded-2xl hover:bg-white/15 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2">
+              <div className="bg-gradient-to-br from-blue-400 to-blue-500 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <Shield className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-black text-white mb-3">Farm Painting & Aluminum Coatings</h3>
+              <p className="text-blue-100 leading-relaxed">
+                Specialized painting for barns, farm structures, and aluminum surfaces. Our durable aluminum coatings protect agricultural buildings from harsh weather conditions and extend their lifespan.
+              </p>
+            </div>
+
+            {/* Service 3: Residential Painting */}
+            <div className="group backdrop-blur-md bg-white/10 border border-white/20 p-8 rounded-2xl hover:bg-white/15 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2">
+              <div className="bg-gradient-to-br from-blue-400 to-blue-500 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <Droplet className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-black text-white mb-3">Residential Painting & Roof Preservation</h3>
+              <p className="text-blue-100 leading-relaxed">
+                Professional residential painting and roof preservation services for homes. Our expert application ensures beautiful, long-lasting results with advanced coating systems designed for any climate.
+              </p>
+            </div>
+
+            {/* Service 4: Industrial Painting */}
+            <div className="group backdrop-blur-md bg-white/10 border border-white/20 p-8 rounded-2xl hover:bg-white/15 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2">
+              <div className="bg-gradient-to-br from-blue-400 to-blue-500 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <Zap className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-black text-white mb-3">Industrial Coating Solutions</h3>
+              <p className="text-blue-100 leading-relaxed">
+                Heavy-duty protective coatings for industrial buildings, tanks, and large-scale commercial structures. Our industrial-grade systems provide superior durability and long-term protection.
               </p>
             </div>
           </div>
@@ -395,43 +411,59 @@ export default function Home() {
             <h2 className="text-5xl font-black text-blue-900 mb-4">Our Products & Services</h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto shadow-lg shadow-blue-500/40 rounded-full" />
             <p className="text-slate-600 text-lg mt-4 max-w-2xl mx-auto">
-              Explore our comprehensive range of protective coating services and solutions designed for Louisiana properties
+              Explore our comprehensive range of protective coating services and solutions across the Midwest and South
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {galleryItems.map((item, idx) => (
-              <div key={idx} className="group">
-                <button
-                  onClick={() => setPreviewMedia({ src: item.imageUrl, alt: item.title, type: item.mediaType || "image" })}
-                  className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-80 w-full cursor-pointer mb-4"
-                >
-                  {item.mediaType === "video" ? (
-                    <video
-                      src={item.imageUrl}
-                      className="w-full h-full object-cover"
-                      poster="https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2F86334f8df462482eb635ab4991a1a747?format=webp&width=800"
-                    />
-                  ) : (
-                    <img
-                      src={item.imageUrl}
-                      alt={item.title}
-                      className="w-full h-full object-cover"
-                    />
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-bold">
-                      {item.mediaType === "video" ? "Play Video" : "Click to Preview"}
-                    </span>
+            {galleryItems.map((item, idx) => {
+              const categoryMap: { [key: string]: string } = {
+                "Residential Exterior": "Residential Painting",
+                "Roof Preservation": "Residential Painting",
+                "Premium Exterior": "Residential Painting",
+                "Farm Painting": "Farm Painting",
+                "Industrial Tank": "Industrial Painting",
+                "Commercial Building": "Industrial Painting",
+                "Pressure Washing": "Elastomeric",
+              }
+              const category = Object.entries(categoryMap).find(([key]) => item.title.includes(key))?.[1] || "Featured"
+
+              return (
+                <div key={idx} className="group">
+                  <div className="mb-2">
+                    <span className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold">{category}</span>
                   </div>
-                </button>
-                <div className="px-2">
-                  <h3 className="text-xl font-black text-blue-900 mb-3">{item.title}</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">{item.description}</p>
+                  <button
+                    onClick={() => setPreviewMedia({ src: item.imageUrl, alt: item.title, type: item.mediaType || "image" })}
+                    className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-80 w-full cursor-pointer mb-4"
+                  >
+                    {item.mediaType === "video" ? (
+                      <video
+                        src={item.imageUrl}
+                        className="w-full h-full object-cover"
+                        poster="https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2F86334f8df462482eb635ab4991a1a747?format=webp&width=800"
+                      />
+                    ) : (
+                      <img
+                        src={item.imageUrl}
+                        alt={item.title}
+                        className="w-full h-full object-cover"
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-bold">
+                        {item.mediaType === "video" ? "Play Video" : "Click to Preview"}
+                      </span>
+                    </div>
+                  </button>
+                  <div className="px-2">
+                    <h3 className="text-xl font-black text-blue-900 mb-3">{item.title}</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">{item.description}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
@@ -490,7 +522,7 @@ export default function Home() {
       {/* Why Choose Us Section */}
       <section className="py-24 px-4 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-black text-blue-900 text-center mb-16">Why Louisiana Trusts Costello</h2>
+          <h2 className="text-4xl font-black text-blue-900 text-center mb-16">Why Customers Trust Costello</h2>
 
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
@@ -645,7 +677,7 @@ export default function Home() {
                     <MapPin className="text-white" size={24} />
                   </div>
                   <p className="text-blue-100 mb-2 font-semibold">Service Area</p>
-                  <p className="text-blue-300 font-bold">Lafayette & Acadiana Region</p>
+                  <p className="text-blue-300 font-bold">Iowa, Louisiana, Missouri, Arkansas, Mississippi</p>
                 </div>
               </div>
             </div>
@@ -662,7 +694,7 @@ export default function Home() {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2Fe59e9fce6e5a4081b7f0d28a2c01f6be?format=webp&width=800"
                   alt="Costello Logo"
-                  className="h-10 w-auto object-contain"
+                  className="h-16 w-auto object-contain"
                 />
               </div>
               <p className="text-blue-100 text-sm">Premium protective coatings for Louisiana properties.</p>
@@ -697,7 +729,7 @@ export default function Home() {
               <ul className="space-y-2 text-sm text-blue-100">
                 <li>📞 +1 (337) 567-6072</li>
                 <li>📧 info@costello.com</li>
-                <li>📍 Lafayette, LA & Surrounding Areas</li>
+                <li>📍 Serving Multiple States: IA, LA, MO, AR, MS</li>
               </ul>
             </div>
           </div>
