@@ -32,8 +32,8 @@ export default function Home() {
         rating: 5,
       },
       {
-        text: "Best investment we've made for our property's protection. The coating has held up perfectly through Louisiana summers.",
-        client: "— Sarah K., Acadiana",
+        text: "Best investment we've made for our property's protection. The coating has held up perfectly through harsh weather and extreme conditions.",
+        client: "— Sarah K., Missouri",
         rating: 5,
       },
       {
