@@ -189,7 +189,7 @@ export default function Home() {
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2Fe59e9fce6e5a4081b7f0d28a2c01f6be?format=webp&width=800"
               alt="Costello Protective Coatings Logo"
-              className="h-20 w-auto object-contain"
+              className="h-20 w-auto object-contain filter brightness-0 invert"
             />
           </a>
           <nav className="hidden md:flex gap-8 text-sm font-semibold">
