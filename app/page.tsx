@@ -80,22 +80,22 @@ export default function Home() {
   const testimonials = [
     {
       text: "Costello transformed our home's exterior completely. The attention to detail and professionalism exceeded our expectations.",
-      client: "— Michael L., Lafayette",
+      client: "— Michael L., Iowa",
       rating: 5,
     },
     {
-      text: "Best investment we've made for our property's protection. The coating has held up perfectly through Louisiana summers.",
-      client: "— Sarah K., Acadiana",
+      text: "Best investment we've made for our property's protection. The coating has held up perfectly through harsh weather and extreme conditions.",
+      client: "— Sarah K., Missouri",
       rating: 5,
     },
     {
       text: "Professional team, exceptional results. They made the entire process seamless and stress-free from start to finish.",
-      client: "— James P., Baton Rouge",
+      client: "— James P., Louisiana",
       rating: 5,
     },
     {
       text: "Outstanding service! The before and after difference is remarkable. Highly recommend Costello to anyone.",
-      client: "— Jennifer T., New Iberia",
+      client: "— Jennifer T., Arkansas",
       rating: 5,
     },
   ]
