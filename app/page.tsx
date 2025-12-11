@@ -7,7 +7,7 @@ import { ChevronDown, Phone, Mail, MapPin, Droplet, Palette, Shield, Zap, Award,
 interface GalleryItem {
   title: string
   description: string
-  imageUrl: string
+  imageUrl: string | string[]
   mediaType?: "image" | "video"
 }
 
@@ -100,6 +100,8 @@ export default function Home() {
     },
   ]
 
+  const [currentImageIndex, setCurrentImageIndex] = useState<{ [key: number]: number }>({})
+
   const galleryItems: GalleryItem[] = [
     {
       title: "Residential Exterior Coating Project",
@@ -120,9 +122,12 @@ export default function Home() {
       mediaType: "image",
     },
     {
-      title: "Roof Preservation & Coating Systems",
-      description: "Advanced protective coating systems applied to residential roofs. Our specialized roof coatings prevent algae growth, resist UV damage, and significantly extend the lifespan of your roofing investment.",
-      imageUrl: "/picturesprotectivecoatingcostello/22347d40a22ddc83509d138162d97da9f54f5d99-4.jpeg",
+      title: "Commercial Paintings",
+      description: "Professional commercial painting and protective coating applications showcasing multiple angles of the same property. Different perspectives of our high-quality commercial painting work demonstrate the attention to detail and durability of our coating systems.",
+      imageUrl: [
+        "/picturesprotectivecoatingcostello/22347d40a22ddc83509d138162d97da9f54f5d99-4.jpeg",
+        "/picturesprotectivecoatingcostello/22347d40a22ddc83509d138162d97da9f54f5d99-3.jpeg",
+      ],
       mediaType: "image",
     },
     {
@@ -144,21 +149,9 @@ export default function Home() {
       mediaType: "image",
     },
     {
-      title: "Additional Coating Examples",
-      description: "More examples of our professional protective coating applications. Each project showcases our commitment to quality, durability, and customer satisfaction in protecting valuable properties.",
-      imageUrl: "/picturesprotectivecoatingcostello/22347d40a22ddc83509d138162d97da9f54f5d99-3.jpeg",
-      mediaType: "image",
-    },
-    {
       title: "Expert Application Process",
       description: "Detailed view of our expert application techniques and professional craftsmanship. Our trained technicians ensure every surface receives the highest quality coating application for maximum protection and aesthetic appeal.",
       imageUrl: "/picturesprotectivecoatingcostello/5e1546e681a5785039c73060a2d2b6bfd7970855-1.jpeg",
-      mediaType: "image",
-    },
-    {
-      title: "Before & After Transformation",
-      description: "Striking before and after comparison demonstrating the dramatic impact of our protective coating services. See how we restore and protect properties, bringing them back to their original beauty while adding years to their lifespan.",
-      imageUrl: "/picturesprotectivecoatingcostello/b3669cd836d9c1def85744d5c75c53e03a4e51c6-2.jpeg",
       mediaType: "image",
     },
     {
@@ -174,8 +167,8 @@ export default function Home() {
       mediaType: "image",
     },
     {
-      title: "Finishing Excellence",
-      description: "Close-up views of our premium finishing work showing the quality and precision of our protective coating applications. Every detail matters when we protect your property with our superior coating systems.",
+      title: "Elastomeric Coatings",
+      description: "Close-up views of our premium elastomeric coating applications showing the quality and precision of our protective coating systems. Every detail matters when we protect your property with our superior elastomeric coating systems.",
       imageUrl: "/picturesprotectivecoatingcostello/22347d40a22ddc83509d138162d97da9f54f5d99-5.jpeg",
       mediaType: "image",
     },
