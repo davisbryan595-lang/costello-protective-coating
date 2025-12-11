@@ -104,13 +104,13 @@ export default function Home() {
     {
       title: "Residential Exterior Coating Project",
       description: "Professional protective coating applied to residential home exteriors. Our premium coating systems provide superior weather resistance and long-lasting protection, maintaining color vibrancy and structural integrity.",
-      imageUrl: "/picturesprotectivecoatingcostello/IMG_2385.png",
+      imageUrl: "/picturesprotectivecoatingcostello/b3669cd836d9c1def85744d5c75c53e03a4e51c6-1.jpeg",
       mediaType: "image",
     },
     {
       title: "Commercial Building Protection",
       description: "Large-scale protective coating application on commercial properties. We deliver professional-grade coating systems engineered for durability, weather resistance, and aesthetic appeal for businesses across the region.",
-      imageUrl: "/picturesprotectivecoatingcostello/b3669cd836d9c1def85744d5c75c53e03a4e51c6-1.jpeg",
+      imageUrl: "/picturesprotectivecoatingcostello/IMG_2385.png",
       mediaType: "image",
     },
     {
