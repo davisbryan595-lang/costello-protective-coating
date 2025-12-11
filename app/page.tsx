@@ -23,8 +23,15 @@ export default function Home() {
   const [formData, setFormData] = useState({ name: "", phone: "", email: "", service: "", message: "" })
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [previewMedia, setPreviewMedia] = useState<PreviewMedia | null>(null)
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isMounted) return
+
     const testimonials = [
       {
         text: "Costello transformed our home's exterior completely. The attention to detail and professionalism exceeded our expectations.",
@@ -53,7 +60,7 @@ export default function Home() {
     }, 7000)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [isMounted])
 
   useEffect(() => {
     const handleScroll = () => {
