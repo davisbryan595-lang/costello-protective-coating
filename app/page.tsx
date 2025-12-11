@@ -439,9 +439,9 @@ export default function Home() {
                   <div className="mb-2">
                     <span className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold">{category}</span>
                   </div>
-                  <button
+                  <div
                     onClick={() => setPreviewMedia({ src: imageUrls[currentIdx], alt: item.title, type: item.mediaType || "image" })}
-                    className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-80 w-full cursor-pointer mb-4"
+                    className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-80 w-full cursor-pointer mb-4 group"
                   >
                     {item.mediaType === "video" && !Array.isArray(item.imageUrl) ? (
                       <video
@@ -479,7 +479,7 @@ export default function Home() {
                         ))}
                       </div>
                     )}
-                  </button>
+                  </div>
                   <div className="px-2">
                     <h3 className="text-xl font-black text-blue-900 mb-3">{item.title}</h3>
                     <p className="text-slate-600 text-sm leading-relaxed">{item.description}</p>
