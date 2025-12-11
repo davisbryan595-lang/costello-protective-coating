@@ -63,6 +63,8 @@ export default function Home() {
   }, [isMounted])
 
   useEffect(() => {
+    if (!isMounted) return
+
     const handleScroll = () => {
       const scrollHeight = document.documentElement.scrollHeight - window.innerHeight
       const scrolled = (window.scrollY / scrollHeight) * 100
@@ -71,7 +73,7 @@ export default function Home() {
 
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  }, [isMounted])
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
