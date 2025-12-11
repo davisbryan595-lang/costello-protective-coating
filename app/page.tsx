@@ -412,14 +412,18 @@ export default function Home() {
             {galleryItems.map((item, idx) => {
               const categoryMap: { [key: string]: string } = {
                 "Residential Exterior": "Residential Painting",
-                "Roof Preservation": "Residential Painting",
                 "Premium Exterior": "Residential Painting",
+                "Commercial Paintings": "Commercial Paintings",
                 "Farm Painting": "Farm Painting",
                 "Industrial Tank": "Industrial Painting",
                 "Commercial Building": "Industrial Painting",
                 "Pressure Washing": "Elastomeric",
+                "Expert Application": "Featured",
+                "Elastomeric Coatings": "Elastomeric",
               }
               const category = Object.entries(categoryMap).find(([key]) => item.title.includes(key))?.[1] || "Featured"
+              const imageUrls = Array.isArray(item.imageUrl) ? item.imageUrl : [item.imageUrl]
+              const currentIdx = currentImageIndex[idx] || 0
 
               return (
                 <div key={idx} className="group">
@@ -427,18 +431,18 @@ export default function Home() {
                     <span className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold">{category}</span>
                   </div>
                   <button
-                    onClick={() => setPreviewMedia({ src: item.imageUrl, alt: item.title, type: item.mediaType || "image" })}
+                    onClick={() => setPreviewMedia({ src: imageUrls[currentIdx], alt: item.title, type: item.mediaType || "image" })}
                     className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 h-80 w-full cursor-pointer mb-4"
                   >
-                    {item.mediaType === "video" ? (
+                    {item.mediaType === "video" && !Array.isArray(item.imageUrl) ? (
                       <video
-                        src={item.imageUrl}
+                        src={item.imageUrl as string}
                         className="w-full h-full object-cover"
                         poster="https://cdn.builder.io/api/v1/image/assets%2F4190207b58b5435387c7048034219577%2F86334f8df462482eb635ab4991a1a747?format=webp&width=800"
                       />
                     ) : (
                       <img
-                        src={item.imageUrl}
+                        src={imageUrls[currentIdx]}
                         alt={item.title}
                         className="w-full h-full object-cover"
                       />
@@ -446,9 +450,26 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <span className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-bold">
-                        {item.mediaType === "video" ? "Play Video" : "Click to Preview"}
+                        {item.mediaType === "video" && !Array.isArray(item.imageUrl) ? "Play Video" : "Click to Preview"}
                       </span>
                     </div>
+                    {imageUrls.length > 1 && (
+                      <div className="absolute bottom-4 left-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {imageUrls.map((_, imgIdx) => (
+                          <button
+                            key={imgIdx}
+                            onClick={(e) => {
+                              e.stopPropagation()
+                              setCurrentImageIndex((prev) => ({ ...prev, [idx]: imgIdx }))
+                            }}
+                            className={`h-2 rounded-full transition-all duration-300 ${
+                              imgIdx === currentIdx ? "bg-white w-6" : "bg-white/40 w-2 hover:bg-white/60"
+                            }`}
+                            aria-label={`Image ${imgIdx + 1}`}
+                          />
+                        ))}
+                      </div>
+                    )}
                   </button>
                   <div className="px-2">
                     <h3 className="text-xl font-black text-blue-900 mb-3">{item.title}</h3>
